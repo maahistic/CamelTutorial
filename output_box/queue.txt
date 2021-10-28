@@ -1,0 +1,1 @@
+Volla..! This is the Queue Message for Camel !
