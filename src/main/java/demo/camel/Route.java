@@ -1,5 +1,6 @@
 package demo.camel;
 
+import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.RouteBuilder;
 
 public class Route extends RouteBuilder{
@@ -8,7 +9,8 @@ public class Route extends RouteBuilder{
 	public void configure() throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("Welcome to Camel Route configure Class");
-		from("file:input_box?noop=true").log("This is the log of Camel").process(new Proc()).to("file:output_box?noop=true");
+		from("direct:start").process(new Proc()).to("seda:end");
+
 	}
 
 }
