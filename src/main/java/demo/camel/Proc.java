@@ -15,8 +15,6 @@ public class Proc implements Processor {
 		System.out.println("Ths Exchange Identifir is :" +exchange.getExchangeId());
 		System.out.println("Ths Mesage Identifir is : "+ exchange.getMessage().getMessageId());
 		exchange.getMessage().setBody(exchange.getMessage().getBody() + "-by Mahendra Nath");
-
-
 	}
 
 }
