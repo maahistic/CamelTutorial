@@ -7,6 +7,9 @@ import org.apache.camel.impl.DefaultCamelContext;
 
 public class App {
 	public static void main(String[] args) throws Exception {
+
+
+
 		CamelContext context = new DefaultCamelContext();
 
 
@@ -14,7 +17,7 @@ public class App {
 
 		context.start();
 		ProducerTemplate pt = context.createProducerTemplate();
-		pt.sendBody("direct:start","Hello All, this is the content of Body !");
+		pt.sendBody("direct:start","Hello All, Welcome to my Camel tutorial !");
 
 		ConsumerTemplate ct = context.createConsumerTemplate();
 		String msg = ct.receiveBody("seda:end",String.class);

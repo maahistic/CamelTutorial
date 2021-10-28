@@ -6,7 +6,8 @@ import org.apache.camel.Processor;
 public class Proc implements Processor {
 
 	public void process(Exchange exchange) throws Exception {
-		System.out.println(" This is the Camel Process Class ");
+		System.out.println("Inside Producer");
+		exchange.getOut().setBody((String)exchange.getIn().getBody() + "-by Mahendra Nath");
 
 	}
 
